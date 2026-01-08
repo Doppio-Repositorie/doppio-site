@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
+import AboutPage from './pages/AboutPage';
 import CappPage from './pages/CappPage';
 import ContactPage from './pages/ContactPage';
 import PrivacyPolicy from './pages/PrivacyPolicy';
@@ -30,6 +31,7 @@ function App() {
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/about" element={<AboutPage />} />
             <Route path="/capp" element={<CappPage />} />
             <Route path="/capp/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/contact" element={<ContactPage />} />

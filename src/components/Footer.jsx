@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate, Link } from 'react-router-dom';
 import './Footer.css';
 
 const Footer = () => {
@@ -40,7 +40,7 @@ const Footer = () => {
                     <h3 className="footer-heading">Links Rápidos</h3>
                     <ul className="footer-links">
                         <li><a href="#hero" onClick={(e) => handleNavigation('hero', e)}>Início</a></li>
-                        <li><a href="#about" onClick={(e) => handleNavigation('identity', e)}>Quem Somos</a></li>
+                        <li><Link to="/about" style={{ color: '#aaa', textDecoration: 'none', transition: 'color 0.3s' }}>Quem Somos</Link></li>
                         <li><a href="#products" onClick={(e) => handleNavigation('products', e)}>Produtos</a></li>
                     </ul>
                 </div>

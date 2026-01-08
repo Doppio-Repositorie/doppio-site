@@ -48,7 +48,7 @@ const Navbar = () => {
             <Link to="/" className="nav-logo" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>Doppio</Link>
             <ul className="nav-links">
                 <li><a href="#hero" className="nav-link" onClick={(e) => handleNavigation('hero', e)}>Início</a></li>
-                <li><a href="#identity" className="nav-link" onClick={(e) => handleNavigation('identity', e)}>Quem Somos</a></li>
+                <li><Link to="/about" className="nav-link">Quem Somos</Link></li>
                 <li><a href="#products" className="nav-link" onClick={(e) => handleNavigation('products', e)}>Produtos</a></li>
                 <li><Link to="/contact" className="nav-link">Contato</Link></li>
             </ul>
