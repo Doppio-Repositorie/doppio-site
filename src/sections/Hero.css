@@ -1,0 +1,214 @@
+.hero-section {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: radial-gradient(circle at 70% 30%, #1a0833 0%, var(--bg-primary) 70%);
+    padding: 8rem 2rem 4rem 2rem;
+    overflow: hidden;
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: var(--container-max);
+    gap: 2rem;
+    z-index: 2;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 600px;
+    text-align: left;
+}
+
+.hero-image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    animation: float 6s ease-in-out infinite;
+}
+
+.hero-mascot {
+    max-width: 80%;
+    /* Adjust based on image size */
+    max-height: 500px;
+    border-radius: 20px;
+    /* box-shadow: 0 0 50px rgba(188, 19, 254, 0.3); Removed box shadow from image itself, prefer a glow behind */
+    filter: drop-shadow(0 0 20px rgba(0, 243, 255, 0.2));
+    z-index: 2;
+    /* Optional: Mask or blend mode if image has background. Assuming square/rect image for now */
+}
+
+/* Glow behind mascot */
+.hero-image-container::before {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: var(--accent-secondary);
+    filter: blur(80px);
+    opacity: 0.4;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.hero-eyebrow {
+    font-family: var(--font-primary);
+    font-size: 1rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--accent-primary);
+    margin-bottom: 1.5rem;
+    opacity: 0;
+    animation: fadeUp 0.8s ease forwards 0.2s;
+    text-shadow: 0 0 10px rgba(0, 243, 255, 0.4);
+}
+
+.hero-title {
+    font-family: var(--font-secondary);
+    font-size: 4.5rem;
+    line-height: 1.1;
+    color: var(--text-primary);
+    margin-bottom: 2rem;
+    opacity: 0;
+    animation: fadeUp 1s ease forwards 0.4s;
+}
+
+.hero-title span {
+    display: block;
+    background: linear-gradient(90deg, var(--color-neon-cyan), var(--color-neon-purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* font-style: italic; Removed italic for more robotic feel */
+}
+
+.hero-subtitle {
+    font-family: var(--font-primary);
+    font-size: 1.15rem;
+    color: var(--text-secondary);
+    max-width: 500px;
+    margin-bottom: 3rem;
+    opacity: 0;
+    animation: fadeUp 1s ease forwards 0.6s;
+}
+
+.hero-cta {
+    display: inline-block;
+    padding: 1rem 3rem;
+    background: transparent;
+    color: var(--accent-primary);
+    border: 1px solid var(--accent-primary);
+    font-family: var(--font-primary);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    opacity: 0;
+    animation: fadeUp 1s ease forwards 0.8s;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 243, 255, 0.1);
+}
+
+.hero-cta:hover {
+    background: var(--accent-primary);
+    color: var(--bg-primary);
+    box-shadow: 0 0 30px rgba(0, 243, 255, 0.6);
+}
+
+/* Background Abstract Elements */
+.hero-bg-lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: 0.3;
+}
+
+.line {
+    position: absolute;
+    background: var(--accent-secondary);
+    opacity: 0.2;
+}
+
+.line-1 {
+    height: 100%;
+    width: 1px;
+    left: 10%;
+    top: 0;
+    background: linear-gradient(to bottom, transparent, var(--accent-primary), transparent);
+}
+
+.line-2 {
+    height: 100%;
+    width: 1px;
+    right: 10%;
+    top: 0;
+    background: linear-gradient(to bottom, transparent, var(--accent-secondary), transparent);
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@media (max-width: 900px) {
+    .hero-container {
+        flex-direction: column-reverse;
+        /* Mascot on top (visually, but flex reverse makes it first in DOM? No, column-reverse puts last item first. We want Image first on mobile, or text first? Usually image on top is nice for mascots) */
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .hero-subtitle {
+        margin: 0 auto 3rem auto;
+    }
+
+    .hero-title {
+        font-size: 3rem;
+    }
+
+    .hero-image-container {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .hero-mascot {
+        max-height: 300px;
+    }
+}
