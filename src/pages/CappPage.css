@@ -1,0 +1,210 @@
+.capp-page {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    min-height: 100vh;
+}
+
+/* CAPP Hero */
+.capp-hero {
+    position: relative;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 60px;
+    border-bottom: 2px solid #FFFF00;
+    box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.8);
+}
+
+.capp-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.9));
+}
+
+.capp-hero-content {
+    text-align: center;
+    z-index: 2;
+    max-width: 900px;
+    padding: 0 2rem;
+    animation: fadeUp 1s ease forwards;
+}
+
+.capp-logo {
+    font-family: 'Courier New', monospace;
+    font-size: 6rem;
+    font-weight: bold;
+    color: #FFFF00;
+    text-shadow: 0 0 30px rgba(255, 255, 0, 0.6);
+    margin-bottom: 1rem;
+    letter-spacing: 12px;
+}
+
+.capp-tagline {
+    font-size: 1.8rem;
+    color: #fff;
+    margin-bottom: 2rem;
+    font-family: var(--font-primary);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+.capp-download-btn {
+    display: inline-block;
+    padding: 1.2rem 4rem;
+    background: #FFFF00;
+    color: #000;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    clip-path: polygon(10% 0, 100% 0, 100% 70%, 90% 100%, 0 100%, 0 30%);
+    /* Cyber shape */
+    transition: all 0.3s ease;
+}
+
+.capp-download-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 50px rgba(255, 255, 0, 0.4);
+    background: #fff;
+}
+
+/* Feature Sections */
+.capp-features {
+    padding: 6rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature-block {
+    display: flex;
+    align-items: center;
+    gap: 6rem;
+    margin-bottom: 10rem;
+}
+
+.feature-block.reverse {
+    flex-direction: row-reverse;
+}
+
+.feature-text {
+    flex: 1;
+}
+
+.feature-title {
+    font-family: var(--font-secondary);
+    font-size: 2.5rem;
+    color: #FFFF00;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    border-left: 4px solid #FFFF00;
+    padding-left: 1rem;
+}
+
+.feature-description {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.feature-subpoints {
+    list-style: none;
+    border-top: 1px solid rgba(255, 255, 0, 0.2);
+    padding-top: 1rem;
+}
+
+.feature-subpoints li {
+    margin-bottom: 0.8rem;
+    color: #ccc;
+    display: flex;
+    align-items: center;
+}
+
+.feature-subpoints li::before {
+    content: '⚡';
+    /* Electric bolt for CAPP */
+    margin-right: 0.8rem;
+    color: #FFFF00;
+    font-size: 0.8rem;
+}
+
+.feature-image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    perspective: 1000px;
+}
+
+/* Replaced generic crop-frame with mobile-frame */
+.mobile-frame {
+    width: auto;
+    max-width: 350px;
+    /* Constrain width but let height flow or fit */
+    border: 2px solid #333;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+    background: #000;
+    transition: transform 0.5s ease;
+}
+
+.mobile-frame.wide-view {
+    max-width: 450px;
+    /* For attributes grid */
+}
+
+.mobile-frame:hover {
+    transform: rotateY(-5deg) rotateX(5deg);
+    border-color: #FFFF00;
+}
+
+.mobile-frame img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.privacy-link-container {
+    text-align: center;
+    padding: 4rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 4rem;
+}
+
+.privacy-link {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    text-decoration: underline;
+    transition: color 0.3s;
+}
+
+.privacy-link:hover {
+    color: #FFFF00;
+}
+
+@media (max-width: 900px) {
+
+    .feature-block,
+    .feature-block.reverse {
+        flex-direction: column;
+        text-align: left;
+        gap: 3rem;
+    }
+
+    .capp-logo {
+        font-size: 3.5rem;
+    }
+
+    .mobile-frame {
+        width: 100%;
+        max-width: 320px;
+    }
+}
