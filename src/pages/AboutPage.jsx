@@ -53,13 +53,14 @@ const AboutPage = () => {
             </div>
 
             {/* Mission / Vision / Values */}
+            {/* Mission / Vision Section */}
             <div style={{
                 display: 'grid',
                 gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
                 gap: '2rem',
                 maxWidth: '1200px',
                 width: '100%',
-                marginBottom: '6rem'
+                marginBottom: '4rem'
             }}>
                 {/* Missão */}
                 <div style={{
@@ -84,24 +85,56 @@ const AboutPage = () => {
                     <h3 style={{ color: '#bc13fe', fontSize: '1.8rem', marginBottom: '1rem', fontFamily: "'Orbitron', sans-serif" }}>Nossa Visão</h3>
                     <p style={{ color: '#ccc', lineHeight: '1.6' }}>Ser referência no mercado de design e tecnologia como agência que une criatividade, inovação e estratégia com foco total em resultados.</p>
                 </div>
+            </div>
 
-                {/* Valores */}
-                <div style={{
-                    background: 'rgba(255, 255, 255, 0.03)',
-                    border: '1px solid rgba(255, 255, 255, 0.1)',
-                    padding: '2rem',
-                    borderRadius: '16px',
-                    backdropFilter: 'blur(10px)'
-                }}>
-                    <h3 style={{ color: '#fff', fontSize: '1.8rem', marginBottom: '1rem', fontFamily: "'Orbitron', sans-serif" }}>Nossos Valores</h3>
-                    <ul style={{ listStyle: 'none', padding: 0, color: '#ccc', lineHeight: '1.8' }}>
-                        <li style={{ marginBottom: '0.5rem' }}><strong style={{ color: '#00f3ff' }}>Criatividade:</strong> exploramos ideias originais e soluções diferenciadas.</li>
-                        <li style={{ marginBottom: '0.5rem' }}><strong style={{ color: '#00f3ff' }}>Excelência:</strong> buscamos qualidade em cada detalhe do nosso trabalho.</li>
-                        <li style={{ marginBottom: '0.5rem' }}><strong style={{ color: '#00f3ff' }}>Compromisso:</strong> sua meta é nossa prioridade.</li>
-                        <li style={{ marginBottom: '0.5rem' }}><strong style={{ color: '#00f3ff' }}>Transparência:</strong> processos claros e comunicação aberta.</li>
-                        <li><strong style={{ color: '#00f3ff' }}>Resultados:</strong> trabalhamos para impactar positivamente seu negócio.</li>
-                    </ul>
-                </div>
+            {/* Values Section */}
+            <h2 style={{
+                fontFamily: "'Orbitron', sans-serif",
+                fontSize: '2.5rem',
+                color: '#fff',
+                marginBottom: '3rem',
+                textAlign: 'center',
+                textTransform: 'uppercase'
+            }}>Nossos Valores</h2>
+
+            <div style={{
+                display: 'flex',
+                flexWrap: 'wrap',
+                justifyContent: 'center',
+                gap: '2rem',
+                maxWidth: '1200px',
+                width: '100%',
+                marginBottom: '6rem'
+            }}>
+                {[
+                    { title: 'Criatividade', desc: 'Exploramos ideias originais e soluções diferenciadas.', color: '#00f3ff' },
+                    { title: 'Excelência', desc: 'Buscamos qualidade em cada detalhe do nosso trabalho.', color: '#bc13fe' },
+                    { title: 'Compromisso', desc: 'Sua meta é nossa prioridade.', color: '#FFFF00' },
+                    { title: 'Transparência', desc: 'Processos claros e comunicação aberta.', color: '#00f3ff' },
+                    { title: 'Resultados', desc: 'Trabalhamos para impactar positivamente seu negócio.', color: '#bc13fe' }
+                ].map((value, index) => (
+                    <div key={index} style={{
+                        flex: '1 1 300px',
+                        maxWidth: '350px',
+                        background: 'rgba(255, 255, 255, 0.03)',
+                        border: `1px solid ${value.color}`,
+                        padding: '2rem',
+                        borderRadius: '16px',
+                        backdropFilter: 'blur(10px)',
+                        transition: 'transform 0.3s ease',
+                        cursor: 'default',
+                        textAlign: 'center',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'center'
+                    }}
+                        onMouseOver={(e) => e.currentTarget.style.transform = 'translateY(-5px)'}
+                        onMouseOut={(e) => e.currentTarget.style.transform = 'translateY(0)'}
+                    >
+                        <h4 style={{ color: value.color, fontSize: '1.5rem', marginBottom: '1rem', fontFamily: "'Orbitron', sans-serif" }}>{value.title}</h4>
+                        <p style={{ color: '#ccc', lineHeight: '1.6', fontSize: '1rem' }}>{value.desc}</p>
+                    </div>
+                ))}
             </div>
 
             {/* Partners Section */}
