@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { translations } from '../translations';
-import { Linkedin, Instagram } from 'lucide-react';
+import { Linkedin } from 'lucide-react';
 
 const MayssaContact = ({ lang }) => {
     const t = translations[lang].contact;
@@ -19,7 +19,7 @@ const MayssaContact = ({ lang }) => {
 
                 <div style={{ display: 'flex', justifyContent: 'center', gap: '2rem', flexWrap: 'wrap', marginBottom: '6rem' }}>
                     <motion.a
-                        href="https://www.linkedin.com/in/mayssa-camarinha/"
+                        href="https://www.linkedin.com/in/mayssa-lameu-de-azevedo/"
                         target="_blank"
                         rel="noopener noreferrer"
                         whileHover={{ y: -5 }}
@@ -37,27 +37,6 @@ const MayssaContact = ({ lang }) => {
                     >
                         <Linkedin size={32} color="#0077b5" />
                         <span>{t.linkedin}</span>
-                    </motion.a>
-
-                    <motion.a
-                        href="https://www.instagram.com/mayssa.design/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        whileHover={{ y: -5 }}
-                        style={{
-                            display: 'flex',
-                            flexDirection: 'column',
-                            alignItems: 'center',
-                            gap: '1rem',
-                            padding: '2rem',
-                            background: 'var(--mayssa-bg-card)',
-                            borderRadius: '16px',
-                            minWidth: '150px',
-                            border: '1px solid rgba(255,255,255,0.05)'
-                        }}
-                    >
-                        <Instagram size={32} color="#E1306C" />
-                        <span>{t.instagram}</span>
                     </motion.a>
                 </div>
 
