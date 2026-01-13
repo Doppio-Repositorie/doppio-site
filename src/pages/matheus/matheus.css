@@ -76,4 +76,42 @@
         grid-template-columns: 1fr !important;
         direction: ltr !important;
     }
+
+    .matheus-portfolio .section-padding {
+        padding: 4rem 0;
+    }
+
+    .matheus-portfolio .container {
+        padding: 0 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .matheus-portfolio .section-padding {
+        padding: 3rem 0;
+    }
+
+    .matheus-portfolio .container {
+        padding: 0 1rem;
+    }
+
+    .matheus-portfolio h1 {
+        font-size: 2.5rem !important;
+    }
+
+    .matheus-portfolio h2 {
+        font-size: 1.8rem !important;
+    }
+
+    .matheus-portfolio h3 {
+        font-size: 1.3rem !important;
+    }
+
+    .matheus-portfolio .project-card>div:first-child {
+        height: 280px !important;
+    }
+
+    .matheus-portfolio .project-card>div:last-child {
+        padding: 1rem !important;
+    }
 }

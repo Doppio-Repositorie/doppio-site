@@ -122,3 +122,72 @@
     transform: translateY(-3px);
     box-shadow: 0 8px 30px rgba(188, 19, 254, 0.4);
 }
+
+@media (max-width: 768px) {
+    .identity-section {
+        padding: 4rem 1.5rem;
+    }
+
+    .identity-title {
+        font-size: 2.5rem;
+    }
+
+    .identity-intro {
+        font-size: 1rem;
+    }
+
+    .values-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .value-card {
+        padding: 2rem;
+    }
+
+    .card-title {
+        font-size: 1.5rem;
+    }
+
+    .founders-button {
+        padding: 0.9rem 2rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .identity-section {
+        padding: 3rem 1rem;
+    }
+
+    .identity-title {
+        font-size: 2rem;
+    }
+
+    .identity-header {
+        margin-bottom: 2.5rem;
+    }
+
+    .value-card {
+        padding: 1.5rem;
+    }
+
+    .card-title {
+        font-size: 1.3rem;
+    }
+
+    .card-text {
+        font-size: 0.95rem;
+    }
+
+    .identity-cta {
+        margin-top: 3rem;
+    }
+
+    .founders-button {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+        width: 100%;
+        text-align: center;
+    }
+}

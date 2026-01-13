@@ -1,0 +1,362 @@
+.about-page {
+    min-height: 100vh;
+    padding: 120px 20px;
+    background: linear-gradient(to bottom, #05020a, #1a0b2e);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Outfit', sans-serif;
+}
+
+.about-header {
+    text-align: center;
+    margin-bottom: 5rem;
+    max-width: 900px;
+    animation: fadeIn 0.8s ease forwards;
+}
+
+.about-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3.5rem;
+    color: #00f3ff;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    text-shadow: 0 0 20px rgba(0, 243, 255, 0.3);
+}
+
+.about-intro {
+    font-size: 1.2rem;
+    color: #e0e0e0;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.about-intro-secondary {
+    font-size: 1.1rem;
+    color: #aaa;
+    line-height: 1.8;
+}
+
+/* Mission / Vision Grid */
+.mission-vision-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    width: 100%;
+    margin-bottom: 4rem;
+}
+
+.mission-card,
+.vision-card {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 2rem;
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+}
+
+.mission-card {
+    border: 1px solid rgba(0, 243, 255, 0.2);
+}
+
+.vision-card {
+    border: 1px solid rgba(188, 19, 254, 0.2);
+}
+
+.mission-card h3 {
+    color: #FFFF00;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.vision-card h3 {
+    color: #bc13fe;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.mission-card p,
+.vision-card p {
+    color: #ccc;
+    line-height: 1.6;
+}
+
+/* Values Section */
+.values-section-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 3rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.values-flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1200px;
+    width: 100%;
+    margin-bottom: 6rem;
+}
+
+.value-item {
+    flex: 1 1 300px;
+    max-width: 350px;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 2rem;
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease;
+    cursor: default;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.value-item:hover {
+    transform: translateY(-5px);
+}
+
+.value-item h4 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.value-item p {
+    color: #ccc;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+/* Leadership Section */
+.leadership-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 3rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.leadership-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    max-width: 1000px;
+    justify-content: center;
+}
+
+.leader-card {
+    flex: 1;
+    min-width: 300px;
+    background: linear-gradient(145deg, rgba(5, 2, 10, 0.8), rgba(20, 10, 30, 0.8));
+    border-radius: 20px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.leader-card.may {
+    border: 1px solid #bc13fe;
+    box-shadow: 0 10px 30px rgba(188, 19, 254, 0.15);
+}
+
+.leader-card.matheus {
+    border: 1px solid #00f3ff;
+    box-shadow: 0 10px 30px rgba(0, 243, 255, 0.15);
+}
+
+.leader-card h3 {
+    font-size: 2rem;
+    font-family: 'Orbitron', sans-serif;
+    margin-bottom: 0.5rem;
+}
+
+.leader-card.may h3 {
+    color: #bc13fe;
+}
+
+.leader-card.matheus h3 {
+    color: #00f3ff;
+}
+
+.leader-card .role {
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+}
+
+.leader-card .bio {
+    color: #ccc;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.leader-card .portfolio-btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background: transparent;
+    border-radius: 8px;
+    text-decoration: none;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    margin-top: auto;
+    text-align: center;
+}
+
+.leader-card.may .portfolio-btn {
+    border: 2px solid #bc13fe;
+    color: #bc13fe;
+}
+
+.leader-card.may .portfolio-btn:hover {
+    background: #bc13fe;
+    color: #fff;
+}
+
+.leader-card.matheus .portfolio-btn {
+    border: 2px solid #00f3ff;
+    color: #00f3ff;
+}
+
+.leader-card.matheus .portfolio-btn:hover {
+    background: #00f3ff;
+    color: #05020a;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .about-page {
+        padding: 100px 15px;
+    }
+
+    .about-header {
+        margin-bottom: 3rem;
+    }
+
+    .about-title {
+        font-size: 2.5rem;
+    }
+
+    .about-intro {
+        font-size: 1.1rem;
+    }
+
+    .about-intro-secondary {
+        font-size: 1rem;
+    }
+
+    .mission-card h3,
+    .vision-card h3 {
+        font-size: 1.5rem;
+    }
+
+    .values-section-title,
+    .leadership-title {
+        font-size: 2rem;
+    }
+
+    .values-flex-container {
+        gap: 1.5rem;
+        margin-bottom: 4rem;
+    }
+
+    .value-item {
+        padding: 1.5rem;
+    }
+
+    .value-item h4 {
+        font-size: 1.3rem;
+    }
+
+    .leadership-container {
+        gap: 2rem;
+    }
+
+    .leader-card {
+        padding: 1.5rem;
+    }
+
+    .leader-card h3 {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-page {
+        padding: 80px 12px;
+    }
+
+    .about-title {
+        font-size: 1.8rem;
+    }
+
+    .about-intro {
+        font-size: 1rem;
+    }
+
+    .mission-vision-grid {
+        gap: 1rem;
+    }
+
+    .mission-card,
+    .vision-card {
+        padding: 1.5rem;
+    }
+
+    .mission-card h3,
+    .vision-card h3 {
+        font-size: 1.3rem;
+    }
+
+    .values-section-title,
+    .leadership-title {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .value-item {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .leader-card {
+        min-width: 100%;
+    }
+
+    .leader-card h3 {
+        font-size: 1.4rem;
+    }
+
+    .leader-card .role {
+        font-size: 1rem;
+    }
+
+    .leader-card .portfolio-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

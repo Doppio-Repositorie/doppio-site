@@ -77,4 +77,42 @@
         grid-template-columns: 1fr !important;
         direction: ltr !important;
     }
+
+    .mayssa-portfolio .section-padding {
+        padding: 4rem 0;
+    }
+
+    .mayssa-portfolio .container {
+        padding: 0 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .mayssa-portfolio .section-padding {
+        padding: 3rem 0;
+    }
+
+    .mayssa-portfolio .container {
+        padding: 0 1rem;
+    }
+
+    .mayssa-portfolio h1 {
+        font-size: 2.5rem !important;
+    }
+
+    .mayssa-portfolio h2 {
+        font-size: 1.8rem !important;
+    }
+
+    .mayssa-portfolio h3 {
+        font-size: 1.3rem !important;
+    }
+
+    .mayssa-portfolio .project-card>div:first-child {
+        height: 280px !important;
+    }
+
+    .mayssa-portfolio .project-card>div:last-child {
+        padding: 1rem !important;
+    }
 }

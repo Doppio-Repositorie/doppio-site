@@ -212,3 +212,37 @@
         max-height: 300px;
     }
 }
+
+@media (max-width: 480px) {
+    .hero-section {
+        padding: 6rem 1rem 3rem 1rem;
+    }
+
+    .hero-title {
+        font-size: 2.2rem;
+    }
+
+    .hero-eyebrow {
+        font-size: 0.8rem;
+        letter-spacing: 2px;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .hero-cta {
+        padding: 0.8rem 2rem;
+        font-size: 0.85rem;
+    }
+
+    .hero-mascot {
+        max-height: 220px;
+    }
+
+    .hero-image-container::before {
+        width: 150px;
+        height: 150px;
+    }
+}
