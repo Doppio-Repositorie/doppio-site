@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Identity.css';
 
 const Identity = () => {
@@ -36,6 +37,12 @@ const Identity = () => {
                         <li>Qualidade técnica</li>
                     </ul>
                 </div>
+            </div>
+
+            <div className="identity-cta">
+                <Link to="/about" className="founders-button">
+                    Conheça os fundadores
+                </Link>
             </div>
         </section>
     );

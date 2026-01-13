@@ -1,0 +1,80 @@
+/* Mayssa Portfolio Styles - Scoped with Purple Theme */
+.mayssa-portfolio {
+    --mayssa-bg-primary: #0a0812;
+    --mayssa-bg-secondary: #1a1228;
+    --mayssa-bg-card: #2a1f40;
+    --mayssa-text-primary: #ffffff;
+    --mayssa-text-secondary: #c4b9d6;
+    --mayssa-accent: #bc13fe;
+    --mayssa-accent-secondary: #9b4dca;
+    --mayssa-accent-glow: rgba(188, 19, 254, 0.3);
+    --mayssa-radius: 24px;
+    --mayssa-font-heading: 'Outfit', sans-serif;
+    --mayssa-font-body: 'Inter', sans-serif;
+}
+
+.mayssa-portfolio {
+    font-family: var(--mayssa-font-body);
+    background-color: var(--mayssa-bg-primary);
+    color: var(--mayssa-text-primary);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+.mayssa-portfolio h1,
+.mayssa-portfolio h2,
+.mayssa-portfolio h3,
+.mayssa-portfolio h4,
+.mayssa-portfolio h5,
+.mayssa-portfolio h6 {
+    font-family: var(--mayssa-font-heading);
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.mayssa-portfolio a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+.mayssa-portfolio button {
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-family: inherit;
+}
+
+.mayssa-portfolio .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.mayssa-portfolio .section-padding {
+    padding: 6rem 0;
+}
+
+.mayssa-portfolio .gradient-text {
+    background: linear-gradient(to right, #fff, #d8a9ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.mayssa-portfolio .accent-text {
+    color: var(--mayssa-accent);
+}
+
+/* Hide scrollbar for gallery */
+.mayssa-portfolio .gallery-carousel::-webkit-scrollbar {
+    display: none;
+}
+
+/* Responsive project cards */
+@media (max-width: 900px) {
+    .mayssa-portfolio .project-card {
+        grid-template-columns: 1fr !important;
+        direction: ltr !important;
+    }
+}

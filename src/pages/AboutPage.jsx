@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const AboutPage = () => {
 
@@ -170,9 +171,33 @@ const AboutPage = () => {
                         <h3 style={{ fontSize: '2rem', color: '#bc13fe', fontFamily: "'Orbitron', sans-serif" }}>May</h3>
                         <p style={{ color: '#fff', fontWeight: 'bold', fontSize: '1.1rem', letterSpacing: '1px' }}>Designer Digital & Direção Criativa</p>
                     </div>
-                    <p style={{ color: '#ccc', lineHeight: '1.6' }}>
+                    <p style={{ color: '#ccc', lineHeight: '1.6', marginBottom: '1.5rem' }}>
                         Designer responsável pela identidade visual, UX/UI e estratégia estética dos projetos. Atua na criação de experiências visuais que comunicam propósito, fortalecem marcas e aumentam a percepção de valor no digital.
                     </p>
+                    <Link to="/mayssa" style={{
+                        display: 'inline-block',
+                        padding: '0.8rem 1.5rem',
+                        background: 'transparent',
+                        border: '2px solid #bc13fe',
+                        borderRadius: '8px',
+                        color: '#bc13fe',
+                        textDecoration: 'none',
+                        fontFamily: "'Orbitron', sans-serif",
+                        fontSize: '0.9rem',
+                        transition: 'all 0.3s ease',
+                        marginTop: 'auto'
+                    }}
+                        onMouseOver={(e) => {
+                            e.currentTarget.style.background = '#bc13fe';
+                            e.currentTarget.style.color = '#fff';
+                        }}
+                        onMouseOut={(e) => {
+                            e.currentTarget.style.background = 'transparent';
+                            e.currentTarget.style.color = '#bc13fe';
+                        }}
+                    >
+                        Veja nosso portfólio
+                    </Link>
                 </div>
 
                 {/* Matheus */}
@@ -191,9 +216,33 @@ const AboutPage = () => {
                         <h3 style={{ fontSize: '2rem', color: '#00f3ff', fontFamily: "'Orbitron', sans-serif" }}>Matheus</h3>
                         <p style={{ color: '#fff', fontWeight: 'bold', fontSize: '1.1rem', letterSpacing: '1px' }}>Fullstack Developer & DevOps Architect</p>
                     </div>
-                    <p style={{ color: '#ccc', lineHeight: '1.6' }}>
+                    <p style={{ color: '#ccc', lineHeight: '1.6', marginBottom: '1.5rem' }}>
                         Desenvolvedor responsável pela idealização, construção e deployment dos apps e sites da Doppio. Atua nas modelagens de banco de dados, construção de backend robusto e orientado a objetos, e nos serviços de cloud e infraestrutura.
                     </p>
+                    <Link to="/matheus" style={{
+                        display: 'inline-block',
+                        padding: '0.8rem 1.5rem',
+                        background: 'transparent',
+                        border: '2px solid #00f3ff',
+                        borderRadius: '8px',
+                        color: '#00f3ff',
+                        textDecoration: 'none',
+                        fontFamily: "'Orbitron', sans-serif",
+                        fontSize: '0.9rem',
+                        transition: 'all 0.3s ease',
+                        marginTop: 'auto'
+                    }}
+                        onMouseOver={(e) => {
+                            e.currentTarget.style.background = '#00f3ff';
+                            e.currentTarget.style.color = '#05020a';
+                        }}
+                        onMouseOut={(e) => {
+                            e.currentTarget.style.background = 'transparent';
+                            e.currentTarget.style.color = '#00f3ff';
+                        }}
+                    >
+                        Veja nosso portfólio
+                    </Link>
                 </div>
             </div>
 

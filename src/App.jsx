@@ -8,6 +8,10 @@ import CappPage from './pages/CappPage';
 import ContactPage from './pages/ContactPage';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import NotFound from './pages/NotFound';
+import PortfolioMayssa from './pages/PortfolioMayssa';
+import PortfolioMatheus from './pages/PortfolioMatheus';
+import MatheusProjectDetails from './pages/matheus/MatheusProjectDetails';
+import MayssaProjectDetails from './pages/mayssa/MayssaProjectDetails';
 import './index.css';
 
 // ScrollToTop component to ensure pages start at top on navigation
@@ -35,6 +39,10 @@ function App() {
             <Route path="/capp" element={<CappPage />} />
             <Route path="/capp/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/contact" element={<ContactPage />} />
+            <Route path="/mayssa" element={<PortfolioMayssa />} />
+            <Route path="/mayssa/:id" element={<MayssaProjectDetails />} />
+            <Route path="/matheus" element={<PortfolioMatheus />} />
+            <Route path="/matheus/:id" element={<MatheusProjectDetails />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>

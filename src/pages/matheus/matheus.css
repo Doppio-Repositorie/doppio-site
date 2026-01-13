@@ -1,0 +1,79 @@
+/* Matheus Portfolio Styles - Scoped */
+.matheus-portfolio {
+    --matheus-bg-primary: #0b0e17;
+    --matheus-bg-secondary: #15192b;
+    --matheus-bg-card: #1f2440;
+    --matheus-text-primary: #ffffff;
+    --matheus-text-secondary: #b4b9d6;
+    --matheus-accent: #797ef6;
+    --matheus-accent-glow: rgba(121, 126, 246, 0.3);
+    --matheus-radius: 24px;
+    --matheus-font-heading: 'Outfit', sans-serif;
+    --matheus-font-body: 'Inter', sans-serif;
+}
+
+.matheus-portfolio {
+    font-family: var(--matheus-font-body);
+    background-color: var(--matheus-bg-primary);
+    color: var(--matheus-text-primary);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+.matheus-portfolio h1,
+.matheus-portfolio h2,
+.matheus-portfolio h3,
+.matheus-portfolio h4,
+.matheus-portfolio h5,
+.matheus-portfolio h6 {
+    font-family: var(--matheus-font-heading);
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.matheus-portfolio a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+.matheus-portfolio button {
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-family: inherit;
+}
+
+.matheus-portfolio .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.matheus-portfolio .section-padding {
+    padding: 6rem 0;
+}
+
+.matheus-portfolio .gradient-text {
+    background: linear-gradient(to right, #fff, #999);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.matheus-portfolio .accent-text {
+    color: var(--matheus-accent);
+}
+
+/* Hide scrollbar for gallery */
+.matheus-portfolio .gallery-carousel::-webkit-scrollbar {
+    display: none;
+}
+
+/* Responsive project cards */
+@media (max-width: 900px) {
+    .matheus-portfolio .project-card {
+        grid-template-columns: 1fr !important;
+        direction: ltr !important;
+    }
+}
