@@ -55,19 +55,6 @@ const MayssaProjects = ({ lang }) => {
             image: "/portfolio-matheus/podo-preview.png",
             tags: ["Web Design", "UI/UX", "Responsivo"],
             containImage: true
-        },
-        {
-            id: 'rpg-sheets',
-            title: "C.A.A.P.",
-            category: "In Progress",
-            description: {
-                pt: "UI Design para gerenciador de fichas do RPG Cyberpunk 'Condenados ao Poder'.",
-                en: "UI Design for character sheet manager for 'Condenados ao Poder' Cyberpunk RPG."
-            },
-            gradient: "linear-gradient(135deg, #2b5876 0%, #4e4376 100%)",
-            image: "/portfolio-matheus/caap-preview.png",
-            tags: ["UI/UX", "Game Design", "Cyberpunk"],
-            isDark: true
         }
     ];
 

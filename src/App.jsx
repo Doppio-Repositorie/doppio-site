@@ -12,6 +12,9 @@ import PortfolioMayssa from './pages/PortfolioMayssa';
 import PortfolioMatheus from './pages/PortfolioMatheus';
 import MatheusProjectDetails from './pages/matheus/MatheusProjectDetails';
 import MayssaProjectDetails from './pages/mayssa/MayssaProjectDetails';
+import FitYouSwimPage from './pages/FitYouSwimPage';
+import DeliciasDaMayPage from './pages/DeliciasDaMayPage';
+import KCollectPage from './pages/KCollectPage';
 import './index.css';
 
 // ScrollToTop component to ensure pages start at top on navigation
@@ -39,6 +42,9 @@ function App() {
             <Route path="/capp" element={<CappPage />} />
             <Route path="/capp/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/contact" element={<ContactPage />} />
+            <Route path="/fityouswim" element={<FitYouSwimPage />} />
+            <Route path="/delicias" element={<DeliciasDaMayPage />} />
+            <Route path="/k-collect" element={<KCollectPage />} />
             <Route path="/mayssa" element={<PortfolioMayssa />} />
             <Route path="/mayssa/:id" element={<MayssaProjectDetails />} />
             <Route path="/matheus" element={<PortfolioMatheus />} />

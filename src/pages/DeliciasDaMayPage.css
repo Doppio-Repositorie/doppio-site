@@ -1,0 +1,281 @@
+.delicias-page {
+    background-color: #1a0a14;
+    color: #fff;
+    min-height: 100vh;
+}
+
+/* Hero */
+.dm-hero {
+    position: relative;
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #FF80AB 0%, #FF4081 50%, #C51162 100%);
+    padding-top: 60px;
+    overflow: hidden;
+}
+
+.dm-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(26, 10, 20, 0.2), rgba(26, 10, 20, 0.95));
+}
+
+/* Decorative elements */
+.dm-hero::after {
+    content: '🧁';
+    position: absolute;
+    top: 20%;
+    right: 10%;
+    font-size: 4rem;
+    opacity: 0.15;
+    animation: float 4s ease-in-out infinite;
+}
+
+.dm-hero-content {
+    text-align: center;
+    z-index: 2;
+    max-width: 900px;
+    padding: 0 2rem;
+    animation: fadeUp 1s ease forwards;
+}
+
+.dm-logo-container {
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(135deg, #fff 0%, #ffe6ec 100%);
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 2rem auto;
+    box-shadow: 0 15px 50px rgba(255, 64, 129, 0.4);
+    overflow: hidden;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+}
+
+.dm-logo-container img {
+    width: 90%;
+    height: 90%;
+    object-fit: contain;
+}
+
+.dm-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 0 0 40px rgba(255, 64, 129, 0.8);
+    margin-bottom: 1rem;
+}
+
+.dm-tagline {
+    font-size: 1.5rem;
+    color: #FFB6C1;
+    margin-bottom: 2rem;
+    font-weight: 300;
+}
+
+.dm-download-btn {
+    display: inline-block;
+    padding: 1.2rem 3rem;
+    background: linear-gradient(135deg, #FF4081, #C51162);
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1rem;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.dm-download-btn:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(255, 64, 129, 0.5);
+    background: #fff;
+    color: #FF4081;
+    border-color: #FF4081;
+}
+
+/* Features */
+.dm-features {
+    padding: 6rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.dm-feature-block {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    margin-bottom: 8rem;
+}
+
+.dm-feature-block.reverse {
+    flex-direction: row-reverse;
+}
+
+.dm-feature-text {
+    flex: 1;
+}
+
+.dm-feature-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 2.2rem;
+    color: #FF80AB;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    border-left: 4px solid #FF4081;
+    padding-left: 1rem;
+}
+
+.dm-feature-description {
+    font-size: 1.1rem;
+    color: #d4a5b0;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.dm-feature-list {
+    list-style: none;
+    border-top: 1px solid rgba(255, 128, 171, 0.2);
+    padding-top: 1rem;
+}
+
+.dm-feature-list li {
+    margin-bottom: 0.8rem;
+    color: #FFB6C1;
+    display: flex;
+    align-items: center;
+}
+
+.dm-feature-list li::before {
+    content: '🍰';
+    margin-right: 0.8rem;
+    font-size: 0.9rem;
+}
+
+.dm-feature-image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.dm-mobile-frame {
+    width: auto;
+    max-width: 280px;
+    border: 3px solid #FF80AB;
+    border-radius: 28px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 20px 60px rgba(255, 64, 129, 0.25);
+    background: #1a0a14;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.dm-mobile-frame:hover {
+    transform: translateY(-10px) rotate(1deg);
+    border-color: #FF4081;
+    box-shadow: 0 30px 80px rgba(255, 64, 129, 0.4);
+}
+
+.dm-mobile-frame img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+
+    .dm-feature-block,
+    .dm-feature-block.reverse {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .dm-feature-title {
+        border-left: none;
+        padding-left: 0;
+        border-bottom: 4px solid #FF4081;
+        padding-bottom: 0.5rem;
+    }
+
+    .dm-title {
+        font-size: 2.5rem;
+    }
+
+    .dm-logo-container {
+        width: 160px;
+        height: 160px;
+    }
+}
+
+@media (max-width: 480px) {
+    .dm-hero {
+        height: auto;
+        min-height: 70vh;
+        padding: 100px 1rem 80px 1rem;
+    }
+
+    .dm-title {
+        font-size: 2rem;
+    }
+
+    .dm-tagline {
+        font-size: 1.1rem;
+    }
+
+    .dm-features {
+        padding: 3rem 1rem;
+    }
+
+    .dm-feature-block {
+        margin-bottom: 4rem;
+    }
+
+    .dm-feature-title {
+        font-size: 1.5rem;
+    }
+
+    .dm-mobile-frame {
+        max-width: 240px;
+    }
+
+    .dm-logo-container {
+        width: 140px;
+        height: 140px;
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-15px) rotate(5deg);
+    }
+}

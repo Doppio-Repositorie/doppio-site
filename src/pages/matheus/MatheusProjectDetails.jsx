@@ -87,13 +87,25 @@ const MatheusProjectDetails = () => {
             title: "C.A.A.P.",
             category: "In Progress",
             description: {
-                pt: "C.A.A.P. é o gerenciador oficial de fichas para o sistema de RPG Cyberpunk 'Condenados ao Poder'. O aplicativo automatiza toda a matemática da criação de personagens, gerenciamento de inventário e rolagens de dados, permitindo que os jogadores foquem na narrativa e na sobrevivência em um futuro distópico.",
-                en: "C.A.A.P. is the official character sheet manager for the 'Condenados ao Poder' Cyberpunk RPG system. The app automates all the math behind character creation, inventory management, and dice rolls, allowing players to focus on the narrative and survival in a dystopian future."
+                pt: "C.A.A.P. (Condenados ao Poder - App) é o gerenciador oficial de fichas para o sistema de RPG Cyberpunk 'Condenados ao Poder'. O aplicativo automatiza toda a matemática da criação de personagens, gerenciamento de inventário e rolagens de dados, permitindo que os jogadores foquem na narrativa e na sobrevivência em um futuro distópico.\n\nPrincipais funcionalidades:\n• Tutorial Interativo: Guia completo para criação de personagens passo-a-passo.\n• Gerenciamento de Atributos e Aptidões: Sistema automatizado de cálculos.\n• Inventário e Equipamentos: Controle total dos itens do personagem.\n• Rolagem de Dados: Sistema de dados integrado com regras do sistema.\n• Configurações Personalizáveis: Adapte a experiência às suas preferências.",
+                en: "C.A.A.P. (Condenados ao Poder - App) is the official character sheet manager for the 'Condenados ao Poder' Cyberpunk RPG system. The app automates all the math behind character creation, inventory management, and dice rolls, allowing players to focus on the narrative and survival in a dystopian future.\n\nKey features:\n• Interactive Tutorial: Complete step-by-step character creation guide.\n• Attribute and Aptitude Management: Automated calculation system.\n• Inventory and Equipment: Full control of character items.\n• Dice Rolling: Integrated dice system with game rules.\n• Customizable Settings: Adapt the experience to your preferences."
             },
             gradient: "linear-gradient(135deg, #2b5876 0%, #4e4376 100%)",
             image: "/portfolio-matheus/caap-preview.png",
-            tech: ["Flutter", "Cyberpunk System", "Automation"],
-            gallery: ['?', '?', '?'],
+            banner: "/capp/hero-banner.png",
+            tech: ["Flutter", "SQLite", "Cyberpunk System", "Automation"],
+            gallery: [
+                "/capp/feat-tutorial-1.png",
+                "/capp/feat-tutorial-2.jpg",
+                "/capp/feat-attributes.jpg",
+                "/capp/feat-aptitudes.jpg",
+                "/capp/feat-status.jpg",
+                "/capp/feat-capacities.jpg",
+                "/capp/feat-equipment.jpg",
+                "/capp/dice.jpg",
+                "/capp/books.jpg",
+                "/capp/config.jpg"
+            ],
             isDark: true
         }
     };
